@@ -70,14 +70,14 @@ False
 Sometimes we want to format strings for fixed width output. Can string methods help us?
 
 >>> cell("1,000")
-'      1,000'
+'     1,000'
 >>> len(cell("1,000"))
 10
 
 Sometimes we want to remove errant characters from strings. Can string methods help us?
 
 >>> numeric_cell("1,000")  # Don't get to hung up on doing this right - figure out how to remove that pesky comma!
-'       1000'
+'      1000'
 
 There are many many string methods - check em all out!
 
@@ -99,6 +99,22 @@ space below.
 # DO NOT EDIT ABOVE THIS LINE
 # Add (or edit) python code below this comment block
 
+def double_string(s):
+    return s*2
+
+def either_numbers_or_letters(s):
+    return (s.isalpha() or s.isnumeric())
+
+def cell(s):
+    #print(len(s.rjust(10, " ")))
+    return s.rjust(10, " ")
+
+def numeric_cell(s):
+    s_new = ""
+    for c in s:
+        if c not in ('.', ','):
+            s_new += c
+    return cell(s_new)
 
 # DO NOT EDIT BELOW THIS LINE
 # Add (or edit) python code above this comment block
