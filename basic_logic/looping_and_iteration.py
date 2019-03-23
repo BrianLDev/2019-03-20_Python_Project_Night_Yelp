@@ -39,7 +39,6 @@ a target value and returns the first index of the target
 If you don't find the value, return None.
 
 >>> find_needle('Python rocks', 'x')
-None
 
 Go ahead and implement this with a while loop - but also check out help(str.index) when you're done!
 
@@ -88,6 +87,13 @@ space below.
 # DO NOT EDIT ABOVE THIS LINE
 # Add (or edit) python code below this comment block
 
+def find_needle(s, x):
+    f = s.find(x)
+    if(f != -1):
+        return f
+
+def count_needle(s, x):
+    return s.count(x)
 
 # DO NOT EDIT BELOW THIS LINE
 # Add (or edit) python code above this comment block
