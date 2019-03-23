@@ -122,7 +122,6 @@ space below.
 
 def reversed_string(s):
   s = s[::-1]
-  #s = reversed(s)  # another way to do it built into python, but do it the way above to understand python better.  This doesn't work and returns a "reversed object"
   return s  
 
 def odd_indexes(s):

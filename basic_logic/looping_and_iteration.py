@@ -88,12 +88,23 @@ space below.
 # Add (or edit) python code below this comment block
 
 def find_needle(s, x):
-    f = s.find(x)
-    if(f != -1):
-        return f
+    # return s.index(x)   # easy way to do it, but while loop method demonstrated below
+    found = False
+    step = -1
+    while (found != True):
+        step += 1
+        if s[step] == x:
+            found = True
+        if step == len(s)-1:
+            return None
+    return step
 
 def count_needle(s, x):
-    return s.count(x)
+    count = 0
+    for c in s:
+        if c == x:
+            count += 1
+    return count
 
 # DO NOT EDIT BELOW THIS LINE
 # Add (or edit) python code above this comment block
